@@ -35,19 +35,17 @@ namespace TesteWebApi.Controllers
         }
 
         // PUT: api/Teste/5
-        public List<Aluno> Put(int id, [FromBody]Aluno aluno)
+        public void Put(int id, [FromBody]Aluno aluno)
         {
             Aluno _aluno = new Aluno();
             _aluno.Atualizar(id, aluno);
-            return _aluno.ListarAluno();
         }
 
         // DELETE: api/Teste/5
-        public List<Aluno> Delete(int id)
+        public void Delete(int id)
         {
             Aluno _aluno = new Aluno();
             _aluno.Deletar(id);
-            return _aluno.ListarAluno();
         }
     }
 }
